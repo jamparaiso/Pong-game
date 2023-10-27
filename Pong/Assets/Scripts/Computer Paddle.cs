@@ -4,15 +4,56 @@ using UnityEngine;
 
 public class ComputerPaddle : Paddle
 {
-    // Start is called before the first frame update
-    void Start()
+    public Rigidbody2D ball;
+
+
+    private void FixedUpdate()
+    {
+        //checks if the ball is coming towards the enemy player
+        if (this.ball.velocity.x > 0.0f)
+        {   //checks if the ball y position then move accordingly
+            if (this.ball.position.y > this.transform.position.y)
+            {
+                _rigidbody.AddForce(Vector2.up * this.speed);
+            }
+            else if (this.ball.position.y < this.transform.position.y)
+            {
+                _rigidbody.AddForce(Vector2.down * this.speed);
+            }
+        }
+        else
+        {
+            if(this.transform.position.y > 0.0f)
+            {
+                _rigidbody.AddForce(Vector2.down * this.speed);
+            }
+            else if (this.transform.position.y < 0.0f)
+            {
+                _rigidbody.AddForce(Vector2.up * this.speed);
+            }
+
+        }
+
+        //else if (this.ball.velocity.y < -0.0f)
+        //{
+        //    if (this.ball.position.y > this.transform.position.y)
+        //    {
+        //        _rigidbody.AddForce(Vector2.up * this.speed);
+        //    }
+        //    else if (this.ball.position.y < this.transform.position.y)
+        //    {
+        //        _rigidbody.AddForce(Vector2.down * this.speed);
+        //    }
+        //}
+    }
+
+    private void TrackBall()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
     }
 }

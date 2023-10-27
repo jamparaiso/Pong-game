@@ -773,7 +773,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1222130908}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6746221e30c68f24bbc4a11ec91a81fa, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -825,7 +825,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 6746221e30c68f24bbc4a11ec91a81fa, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 1368591584}
   - component: {fileID: 1368591583}
   - component: {fileID: 1368591582}
+  - component: {fileID: 1368591586}
   m_Layer: 0
   m_Name: Enemy Paddle
   m_TagString: Untagged
@@ -1007,6 +1008,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368591586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368591581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1c40fbcc871374e866b54461605124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  ball: {fileID: 1222130912}
 --- !u!1 &1427313845
 GameObject:
   m_ObjectHideFlags: 0

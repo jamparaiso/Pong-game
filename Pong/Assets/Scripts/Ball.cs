@@ -26,8 +26,8 @@ public class Ball : MonoBehaviour
         float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : 
                                         Random.Range(0.5f, 1.0f);
 
-        Vector2 direction = new Vector2(x, y);
 
+        Vector2 direction = new Vector2(x, y);
         _rigidbody.AddForce(direction * this.speed);
     }
 }
