@@ -11,10 +11,17 @@ public class Ball : MonoBehaviour
     }
     private void Start()
     {
-        AddStartingForce();   
+        ResetPosition();
+        AddStartingForce();
     }
 
-    private void AddStartingForce()
+    public void ResetPosition()
+    {
+        _rigidbody.position = Vector3.zero;
+        _rigidbody.velocity = Vector3.zero;
+    }
+
+    public void AddStartingForce()
     {
         //random direction left or right
         //generate random value betwen 0 to 1
@@ -30,4 +37,11 @@ public class Ball : MonoBehaviour
         Vector2 direction = new Vector2(x, y);
         _rigidbody.AddForce(direction * this.speed);
     }
+
+    public void AddForce(Vector2 force)
+    {
+        _rigidbody.AddForce(force);
+    }
+
+
 }
